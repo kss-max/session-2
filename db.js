@@ -9,7 +9,7 @@ export const connectDB = async () => {
         console.log("mongoose connected successfully");
     } catch (error) {
         console.error("mongoose connection failed:", error.message || error);
-        // Exit the process if the DB connection fails so the issue is obvious
+       
         process.exit(1);
     }
 };
