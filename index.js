@@ -6,6 +6,9 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 connectDB();
 app.use(express.json());
+app.get('/', (req, res) => {
+    res.send('Welcome to the Event Booking API');
+});
 app.get('/api/bookings', async (req, res) => {
     try{
     const events=await event.find({});
